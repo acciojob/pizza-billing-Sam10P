@@ -12,6 +12,7 @@ public class Pizza {
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
+
         // your code goes here
         if(isVeg == true){
             this.price += 300;
@@ -29,11 +30,11 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
-        if(extraCheese == true){
+        if(this.extraCheese == true){
             return;
         }
-        price = getPrice() + 80;
-        extraCheese = true;
+        price = price + 80;
+        this.extraCheese = true;
     }
 
     public void addExtraToppings(){
@@ -42,9 +43,9 @@ public class Pizza {
             return;
         }
         if(isVeg == true){
-            price = getPrice() + 70;
+            price = price + 70;
         }else{
-            price = getPrice() + 120;
+            price = price + 120;
         }
         extraToppings = true;
 
@@ -56,7 +57,7 @@ public class Pizza {
         if(paperBag == true){
             return;
         }
-        price = getPrice() + 20;
+        price = price + 20;
         paperBag = true;
     }
 
@@ -84,7 +85,7 @@ public class Pizza {
             bill = bill + "Paperbag Added: 20\n";
         }
 
-        String totalPrice = Integer.toString(getPrice());
+        String totalPrice = Integer.toString(price);
 
         bill = bill + "Total Price: " + totalPrice;
         return this.bill;
