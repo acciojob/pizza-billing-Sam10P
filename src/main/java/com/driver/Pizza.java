@@ -14,9 +14,9 @@ public class Pizza {
         this.isVeg = isVeg;
         // your code goes here
         if(isVeg == true){
-            this.price = 300;
+            this.price += 300;
         }else{
-            this.price = 400;
+            this.price += 400;
         }
 
     }
@@ -63,13 +63,13 @@ public class Pizza {
     public String getBill(){
         // your code goes here
         if(isVeg == true){
-            bill = "Veg pizza base price = 300\n";
+            bill = "Base Price Of The Pizza: 300\n";
         }else{
-            bill = "Non-veg pizza base price = 400\n";
+            bill = "Base Price Of The Pizza: 400\n";
         }
 
         if(extraCheese == true){
-            bill = bill + "Extra Cheese Price = 80\n";
+            bill = bill + "Extra Cheese Added: 80\n";
         }
 
         if(extraToppings == true){
